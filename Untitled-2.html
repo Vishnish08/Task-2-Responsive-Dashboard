@@ -22,21 +22,18 @@
         
         <!-- Main Content -->
         <div class="ml-64 p-10 w-full">
-            <!-- Home Section -->
             <section id="home">
-                <h1 class="text-4xl font-bold">Welcome to the Vishakha's Dashboard</h1>
+                <h1 class="text-4xl font-bold">Welcome to Vishakha's Dashboard</h1>
                 <p class="mt-4">Manage and analyze your data efficiently.</p>
             </section>
             
-            <!-- Analytics Section -->
             <section id="analytics" class="mt-10">
                 <h2 class="text-3xl font-bold">Analytics</h2>
                 <canvas id="analyticsChart" class="mt-6"></canvas>
                 <canvas id="pieChart" class="mt-6"></canvas>
                 <canvas id="lineChart" class="mt-6"></canvas>
             </section>
-            
-            <!-- Reports Section -->
+
             <section id="reports" class="mt-10">
                 <h2 class="text-3xl font-bold">Reports</h2>
                 <div class="bg-gray-800 p-6 rounded-lg mt-6">
@@ -64,8 +61,7 @@
                     </table>
                 </div>
             </section>
-            
-            <!-- Users Section -->
+
             <section id="users" class="mt-10">
                 <h2 class="text-3xl font-bold">Users</h2>
                 <p class="mt-4">View and manage user data.</p>
@@ -92,76 +88,4 @@
                             <tr class="bg-gray-700">
                                 <td class="p-2">Charlie Davis</td>
                                 <td class="p-2">charlie@example.com</td>
-                                <td class="p-2 text-green-400">Active</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-        </div>
-    </div>
-    
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Bar Chart
-        const ctx = document.getElementById('analyticsChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['January', 'February', 'March', 'April'],
-                datasets: [{
-                    label: 'Revenue',
-                    data: [5000, 7000, 8000, 10000],
-                    backgroundColor: 'rgba(59, 130, 246, 0.5)'
-                }]
-            },
-        });
-
-        // Pie Chart
-        const ctxPie = document.getElementById('pieChart').getContext('2d');
-        new Chart(ctxPie, {
-            type: 'pie',
-            data: {
-                labels: ['Product A', 'Product B', 'Product C'],
-                datasets: [{
-                    label: 'Product Distribution',
-                    data: [40, 35, 25],
-                    backgroundColor: ['#ff6384', '#36a2eb', '#ffce56']
-                }]
-            },
-            options: {
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'bottom'
-                    }
-                }
-            }
-        });
-
-        // Line Chart
-        const ctxLine = document.getElementById('lineChart').getContext('2d');
-        new Chart(ctxLine, {
-            type: 'line',
-            data: {
-                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-                datasets: [{
-                    label: 'User Growth',
-                    data: [100, 200, 400, 600],
-                    borderColor: '#4caf50',
-                    fill: false
-                }]
-            }
-        });
-    </script>
-</body>
-</html>
+                                <td class="p-2 text-green-400"
