@@ -1,3 +1,7 @@
+Vishakha's Dashboard
+
+This is a responsive dashboard built with HTML5, Tailwind CSS, and Chart.js. It features a sidebar for navigation and multiple sections, including analytics with charts, reports, and user management.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +37,7 @@
                 <canvas id="pieChart" class="mt-6"></canvas>
                 <canvas id="lineChart" class="mt-6"></canvas>
             </section>
-
+            
             <section id="reports" class="mt-10">
                 <h2 class="text-3xl font-bold">Reports</h2>
                 <div class="bg-gray-800 p-6 rounded-lg mt-6">
@@ -61,7 +65,7 @@
                     </table>
                 </div>
             </section>
-
+            
             <section id="users" class="mt-10">
                 <h2 class="text-3xl font-bold">Users</h2>
                 <p class="mt-4">View and manage user data.</p>
@@ -85,18 +89,13 @@
                                 <td class="p-2">bob@example.com</td>
                                 <td class="p-2 text-red-400">Inactive</td>
                             </tr>
-                            <tr class="bg-gray-700">
-                                <td class="p-2">Charlie Davis</td>
-                                <td class="p-2">charlie@example.com</td>
-                                <td class="p-2 text-green-400">Active</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
         </div>
     </div>
-
+    
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -118,33 +117,6 @@
                     backgroundColor: 'rgba(59, 130, 246, 0.5)'
                 }]
             },
-        });
-
-        const ctxPie = document.getElementById('pieChart').getContext('2d');
-        new Chart(ctxPie, {
-            type: 'pie',
-            data: {
-                labels: ['Product A', 'Product B', 'Product C'],
-                datasets: [{
-                    label: 'Product Distribution',
-                    data: [40, 35, 25],
-                    backgroundColor: ['#ff6384', '#36a2eb', '#ffce56']
-                }]
-            }
-        });
-
-        const ctxLine = document.getElementById('lineChart').getContext('2d');
-        new Chart(ctxLine, {
-            type: 'line',
-            data: {
-                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-                datasets: [{
-                    label: 'User Growth',
-                    data: [100, 200, 400, 600],
-                    borderColor: '#4caf50',
-                    fill: false
-                }]
-            }
         });
     </script>
 </body>
