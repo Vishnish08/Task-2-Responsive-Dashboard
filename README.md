@@ -2,7 +2,6 @@ Vishakha's Dashboard
 
 This is a responsive dashboard built with HTML5, Tailwind CSS, and Chart.js. It features a sidebar for navigation and multiple sections, including analytics with charts, reports, and user management.
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
