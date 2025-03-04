@@ -88,4 +88,55 @@
                             <tr class="bg-gray-700">
                                 <td class="p-2">Charlie Davis</td>
                                 <td class="p-2">charlie@example.com</td>
-                                <td class="p-2 text-green-400"
+                                <td class="p-2 text-green-400">Active</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- JavaScript for Charts -->
+    <script>
+        const ctx1 = document.getElementById('analyticsChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Sales',
+                    data: [10, 20, 15, 30, 25],
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)'
+                }]
+            }
+        });
+
+        const ctx2 = document.getElementById('pieChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: ['Online', 'Retail', 'Wholesale'],
+                datasets: [{
+                    data: [40, 30, 30],
+                    backgroundColor: ['blue', 'green', 'red']
+                }]
+            }
+        });
+
+        const ctx3 = document.getElementById('lineChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: 'Visitors',
+                    data: [100, 200, 150, 250],
+                    borderColor: 'yellow',
+                    fill: false
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
